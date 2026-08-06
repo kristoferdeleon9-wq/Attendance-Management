@@ -113,8 +113,8 @@ ORDER BY students.fullname
 
 <br>
 
-<strong>Teacher:</strong>
-<?= $class['teacher_name']; ?>
+<strong>Instructor:</strong>
+<?= $class['instructor']; ?>
 
 </p>
 
@@ -278,7 +278,7 @@ echo "-";
 <br>
 
 <a
-href="report.php"
+href="reports.php"
 class="btn-attendance">
 
 ⬅ Back to Reports
