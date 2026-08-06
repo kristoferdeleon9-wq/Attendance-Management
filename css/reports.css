@@ -1,0 +1,51 @@
+/* ======================================
+REPORT PAGE
+====================================== */
+
+.page-description{
+
+color:#666;
+margin-bottom:25px;
+font-size:15px;
+
+}
+
+.attendance-table td{
+
+vertical-align:middle;
+
+}
+
+.attendance-table td strong{
+
+color:#2563eb;
+
+}
+
+.btn-attendance{
+
+min-width:120px;
+
+}
+
+.status-present{
+
+display:inline-block;
+padding:6px 12px;
+border-radius:20px;
+background:#22c55e;
+color:#fff;
+font-weight:600;
+
+}
+
+.status-absent{
+
+display:inline-block;
+padding:6px 12px;
+border-radius:20px;
+background:#ef4444;
+color:#fff;
+font-weight:600;
+
+}
