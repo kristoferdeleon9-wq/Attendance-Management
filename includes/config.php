@@ -2,10 +2,10 @@
 
 date_default_timezone_set('Asia/Manila');
 
-$host = "localhost";
-$user = "root";
-$password = "";
-$database = "attendance_system";
+$host = "sql110.infinityfree.com";
+$user = "if0_42589583";
+$password = "A09566080042";
+$database = "if0_42589583_attendance_management";
 
 $conn = mysqli_connect($host, $user, $password, $database);
 

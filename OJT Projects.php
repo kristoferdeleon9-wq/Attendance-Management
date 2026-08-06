@@ -140,7 +140,7 @@ if (isset($_POST['save'])) {
     <a href="pages/attendance.php">📝 Attendance</a>
     <a href="pages/scanner.php">📷 QR Scanner</a>
     <a href="pages/reports.php">📊 Reports</a>
-    <a href="#">⚙️ Settings</a>
+    <a href="login/logout.php">⏻ Logout</a>
 
 </div>
 

@@ -49,7 +49,7 @@ VALUES
 <a href="classes.php" class="active">🏫 Classes</a>
 <a href="attendance.php">📝 Attendance</a>
 <a href="reports.php">📊 Reports</a>
-    <a href="#">⚙️ Settings</a>
+<a href="login/logout.php">⏻ Logout</a>
 
 </div>
 

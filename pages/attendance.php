@@ -82,7 +82,7 @@ $selectedClass = isset($_GET['class_id']) ? (int)$_GET['class_id'] : 0;
     <a href="classes.php">🎓 Classes</a>
     <a href="attendance.php" class="active">📝 Attendance</a>
     <a href="reports.php">📊 Reports</a>
-    <a href="#">⚙️ Settings</a>
+    <a href="login/logout.php">⏻ Logout</a>
 
 </div>
 
