@@ -91,7 +91,7 @@ ORDER BY students.fullname
 <a href="students.php">👨‍🎓 Students</a>
 <a href="classes.php">🎓 Classes</a>
 <a href="attendance.php">📝 Attendance</a>
-<a href="report.php" class="active">📊 Reports</a>
+<a href="reports.php" class="active">📊 Reports</a>
 
 </div>
 

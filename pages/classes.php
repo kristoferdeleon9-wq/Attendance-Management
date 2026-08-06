@@ -96,8 +96,6 @@ VALUES
 <label>Instructor</label>
 <input type="text" name="instructor" required>
 
-</select>
-
 <label>Class Date</label>
 <input type="date" name="class_date" required>
 
@@ -199,12 +197,15 @@ while($row = mysqli_fetch_assoc($result))
 
     <?php
 
-$current_date = date("Y-m-d");
-$current_time = date("H:i:s");
+date_default_timezone_set('Asia/Manila');
 
-if ($current_date < $row['class_date']) {
+$now = time();
 
-    // Class is scheduled for a future date
+$classStart = strtotime($row['class_date'] . ' ' . $row['start_time']);
+$classEnd   = strtotime($row['class_date'] . ' ' . $row['end_time']);
+
+if ($now < strtotime($row['class_date'])) {
+
 ?>
 
 <a href="#"
@@ -216,23 +217,8 @@ if ($current_date < $row['class_date']) {
 
 <?php
 
-} elseif ($current_date > $row['class_date']) {
+} elseif ($now < $classStart) {
 
-    // Class date has already passed
-?>
-
-<a href="#"
-   class="btn-view"
-   style="background:#6c757d; cursor:not-allowed;"
-   onclick="return false;">
-    ✅ Attendance Session Ended
-</a>
-
-<?php
-
-} elseif (strtotime($current_time) < strtotime($row['start_time'])) {
-
-    // Today is the class date, but it's too early
 ?>
 
 <a href="#"
@@ -244,27 +230,25 @@ if ($current_date < $row['class_date']) {
 
 <?php
 
-} elseif (strtotime($current_time) > strtotime($row['end_time'])) {
+} elseif ($now >= $classStart && $now <= $classEnd) {
 
-    // Today's class has already finished
 ?>
 
-<a href="#"
-   class="btn-view"
-   style="background:#dc3545; cursor:not-allowed;"
-   onclick="return false;">
-    ✅ Attendance Session Ended
+<a href="open_attendance.php?class_id=<?= $row['id']; ?>" class="btn-view">
+    📷 Start Attendance
 </a>
 
 <?php
 
 } else {
 
-    // Date and time are correct
 ?>
 
-<a href="open_attendance.php?class_id=<?= $row['id']; ?>" class="btn-view">
-    📷 Start Attendance
+<a href="#"
+   class="btn-view"
+   style="background:#6c757d; cursor:not-allowed;"
+   onclick="return false;">
+    ✅ Attendance Session Ended
 </a>
 
 <?php
